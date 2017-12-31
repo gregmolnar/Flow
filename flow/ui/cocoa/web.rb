@@ -10,9 +10,9 @@ module UI
 
     def proxy
       @proxy ||= begin
-        ui_web_view = UIWebView.new
+        ui_web_view = WKWebView.new
         ui_web_view.translatesAutoresizingMaskIntoConstraints = false
-        ui_web_view.delegate = self
+        ui_web_view.UIDelegate = self
         ui_web_view
       end
     end
